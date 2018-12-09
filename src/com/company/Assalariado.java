@@ -14,6 +14,7 @@ public class Assalariado {
         this.id = id;
         System.out.print("insert the monthly salary");
         this.salary = input.nextDouble();
+        System.out.print("unionist? yes -- 1 / no -- 2 \n ");
         int unionist = input.nextInt();
         if (unionist == 1){
             this.syndicate = true;

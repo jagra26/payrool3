@@ -12,7 +12,8 @@ public class Sistema {
         this.assalariados = new Assalariado[1000];
         this.comissionados = new Comissionado[1000];
     }
-    public firstDisplay (){
+    public boolean firstDisplay (){
+        boolean exit = false;
         Scanner input = new Scanner(System.in);
         System.out.print("enter the day of the week that the month starts\n"+
                 "sun -- 1 / mon -- 2 / tue -- 3 / wed -- 4 / thu -- 5 / fri -- 6 / sat -- 7\n");
@@ -25,8 +26,14 @@ public class Sistema {
             case 1:
                 addEmployee();
                 break;
-
+            case 2:
+                removeEmployee();
+                break;
+            case 11:
+                exit = true;
+                break;
         }
+        return exit;
     }
     public int dayCalc(int day){
         int lastDay;
@@ -85,6 +92,24 @@ public class Sistema {
                 System.out.printf("the employee id is %d", i);
                 break;
             }
+        }
+    }
+    public void removeEmployee(){
+        System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
+        Scanner input = new Scanner(System.in);
+        int type = input.nextInt();
+        System.out.print("insert the employee id\n");
+        int id = input.nextInt();
+        switch (type){
+            case 1:
+                this.horistas[id] = null;
+                break;
+            case 2:
+                this.assalariados[id] = null;
+                break;
+            case 3:
+                this.comissionados[id] = null;
+                break;
         }
     }
 }
