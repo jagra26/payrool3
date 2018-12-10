@@ -33,6 +33,19 @@ public class Comissionado {
         this.serviceRate = 0;
         this.salary = this.fixedSalary;
     }
+    public Comissionado(int id, String name, boolean syndicate, double serviceRate, double syndicateRate){
+        Scanner input = new Scanner(System.in);
+        System.out.print("insert the fortnightly wage\n");
+        this.fixedSalary = input.nextDouble();
+        System.out.print("enter commission rate %\n");
+        this.rate = input.nextDouble()/100;
+        this.id = id;
+        this.name = name;
+        this.syndicate = syndicate;
+        this.syndicateRate = syndicateRate;
+        this.serviceRate = serviceRate;
+        this.salary = this.fixedSalary;
+    }
     public void newSale(double value){
         this.salary += value*this.rate;
     }

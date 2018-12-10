@@ -29,4 +29,14 @@ public class Assalariado {
         this.salary = 0;
         this.serviceRate = 0;
     }
+    public Assalariado(int id, String name, boolean syndicate, double serviceRate, double syndicateRate){
+        Scanner input = new Scanner(System.in);
+        System.out.print("insert the monthly salary");
+        this.salary = input.nextDouble();
+        this.id = id;
+        this.name = name;
+        this.syndicate = syndicate;
+        this.serviceRate = serviceRate;
+        this.syndicateRate = syndicateRate;
+    }
 }

@@ -29,4 +29,13 @@ public class Horista {
         this.salary = 0;
         this.serviceRate = 0;
     }
+    public Horista(int id, String name, boolean syndicate, double serviceRate, double syndicateRate){
+        this.id = id;
+        this.name = name;
+        this.syndicate = syndicate;
+        this.serviceRate = serviceRate;
+        this.syndicateRate = syndicateRate;
+        this.pointCard = new Cartao();
+        this.salary = 0;
+    }
 }

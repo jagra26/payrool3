@@ -20,7 +20,7 @@ public class Sistema {
         this.lastDay = dayCalc(input.nextInt());
         System.out.print("select an operation:\n add an employee -- 1 / remove an employee -- 2 / "+
                 "post a point card -- 3 / post a sale results -- 4 / launch a service fee -- 5 /" +
-                "change am employee's details -- 6 / turn payroll to today -- 7/ Undo/Redo -- 8 / payment schedule -- 9\n");
+                "change an employee's details -- 6 / turn payroll to today -- 7/ Undo/Redo -- 8 / payment schedule -- 9\n");
         int operation = input.nextInt();
         switch (operation){
             case 1:
@@ -38,6 +38,8 @@ public class Sistema {
             case 5:
                 launchServiceFee();
                 break;
+            case 6:
+                changeEmployeeDetails();
             case 11:
                 exit = true;
                 break;
@@ -163,6 +165,115 @@ public class Sistema {
                     this.comissionados[id].serviceRate += fee;
                 }else{
                     System.out.print("this employee is not a trade unionist\n");
+                }
+                break;
+        }
+    }
+    public void changeEmployeeDetails(){
+        System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
+        Scanner input = new Scanner(System.in);
+        int type = input.nextInt();
+        System.out.print("insert the employee's id\n");
+        int id = input.nextInt();
+        System.out.print("Do you want to change the type?\n yes -- 1 / no -- 2\n");
+        int changeType = input.nextInt();
+        int newType;
+        if (changeType == 1){
+            System.out.print("choose a type for change:\n hourly --1 / salaried --2 / commissioned --3\n");
+            newType = input.nextInt();
+            changeType(type, newType, id);
+        }else {
+            switch (type) {
+                case 1:
+                    this.horistas[id] = new Horista(id);
+                    break;
+                case 2:
+                    this.assalariados[id] = new Assalariado(id);
+                    break;
+                case 3:
+                    this.comissionados[id] = new Comissionado(id);
+                    break;
+            }
+        }
+    }
+    public void changeType(int in, int out, int id){
+        switch (in){
+            case 1:
+                switch (out){
+                    case 2:
+                        for (int i = 0; i<1000; i++){
+                            if (this.assalariados[i] == null){
+                                this.assalariados[i] = new Assalariado(i, this.horistas[id].name,
+                                        this.horistas[id].syndicate, this.horistas[id].serviceRate,
+                                        this.horistas[id].syndicateRate);
+                                this.horistas[id] = null;
+                                break;
+                            }
+                        }
+                        break;
+                    case 3:
+                        for (int i = 0; i<1000; i++){
+                            if (this.comissionados[i] == null){
+                                this.comissionados[i] = new Comissionado(i, this.horistas[id].name,
+                                        this.horistas[id].syndicate, this.horistas[id].serviceRate,
+                                        this.horistas[id].syndicateRate);
+                                this.horistas[id] = null;
+                                break;
+                            }
+                        }
+                        break;
+                }
+                break;
+            case 2:
+                switch (out){
+                    case 1:
+                        for (int i = 0; i<1000; i++){
+                            if (this.horistas[i] == null){
+                                this.horistas[i] = new Horista(i, this.assalariados[id].name,
+                                        this.assalariados[id].syndicate, this.assalariados[id].serviceRate,
+                                        this.assalariados[id].syndicateRate);
+                                this.assalariados[id] = null;
+                                break;
+                            }
+                        }
+                        break;
+                    case 3:
+                        for (int i = 0; i<1000; i++){
+                            if (this.comissionados[i] == null){
+                                this.comissionados[i] = new Comissionado(i, this.assalariados[id].name,
+                                        this.assalariados[id].syndicate, this.assalariados[id].serviceRate,
+                                        this.assalariados[id].syndicateRate);
+                                this.assalariados[id] = null;
+                                break;
+                            }
+                        }
+                        break;
+                }
+                break;
+            case 3:
+                switch (out){
+                    case 1:
+                        for (int i = 0; i<1000; i++){
+                            if (this.horistas[i] == null){
+                                this.horistas[i] = new Horista(i, this.comissionados[id].name,
+                                        this.comissionados[id].syndicate, this.comissionados[id].serviceRate,
+                                        this.comissionados[id].syndicateRate);
+                                this.comissionados[id] = null;
+                                break;
+                            }
+                        }
+                        break;
+                    case 2:
+                        for (int i = 0; i<1000; i++){
+                            if (this.assalariados[i] == null){
+                                this.assalariados[i] = new Assalariado(i, this.comissionados[id].name,
+                                        this.comissionados[id].syndicate, this.comissionados[id].serviceRate,
+                                        this.comissionados[id].syndicateRate);
+                                this.comissionados[id] = null;
+                                break;
+                            }
+                        }
+                        break;
                 }
                 break;
         }
