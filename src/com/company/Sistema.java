@@ -29,6 +29,12 @@ public class Sistema {
             case 2:
                 removeEmployee();
                 break;
+            case 3:
+                postPointCard();
+                break;
+            case 4:
+                postSaleResults();
+                break;
             case 11:
                 exit = true;
                 break;
@@ -111,5 +117,19 @@ public class Sistema {
                 this.comissionados[id] = null;
                 break;
         }
+    }
+    public void postPointCard(){
+        System.out.print("insert the hourly id\n");
+        Scanner input = new Scanner(System.in);
+        int id = input.nextInt();
+        this.horistas[id].salary += this.horistas[id].pointCard.postPC();
+    }
+    public void postSaleResults(){
+        System.out.print("insert the commissioned id\n");
+        Scanner input = new Scanner(System.in);
+        int id = input.nextInt();
+        System.out.print("enter the value of the sale\n");
+        double value = input.nextDouble();
+        this.comissionados[id].newSale(value);
     }
 }
