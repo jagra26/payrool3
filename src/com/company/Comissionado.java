@@ -9,6 +9,8 @@ public class Comissionado {
     double rate;
     boolean syndicate;
     double salary;
+    double syndicateRate;
+    double serviceRate;
     public Comissionado(int id){
         System.out.print("insert the employee name\n");
         Scanner input = new Scanner(System.in);
@@ -22,9 +24,13 @@ public class Comissionado {
         int unionist = input.nextInt();
         if (unionist == 1){
             this.syndicate = true;
+            System.out.print("insert the syndicate rate\n");
+            this.syndicateRate = input.nextDouble();
         }else{
             this.syndicate = false;
+            this.syndicateRate = 0;
         }
+        this.serviceRate = 0;
         this.salary = this.fixedSalary;
     }
     public void newSale(double value){

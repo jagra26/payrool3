@@ -35,6 +35,9 @@ public class Sistema {
             case 4:
                 postSaleResults();
                 break;
+            case 5:
+                launchServiceFee();
+                break;
             case 11:
                 exit = true;
                 break;
@@ -131,5 +134,37 @@ public class Sistema {
         System.out.print("enter the value of the sale\n");
         double value = input.nextDouble();
         this.comissionados[id].newSale(value);
+    }
+    public void launchServiceFee(){
+        System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
+        Scanner input = new Scanner(System.in);
+        int type = input.nextInt();
+        System.out.print("insert the employee's id\n");
+        int id = input.nextInt();
+        System.out.print("insert the service fee\n");
+        double fee = input.nextDouble();
+        switch (type){
+            case 1:
+                if(this.horistas[id].syndicate){
+                    this.horistas[id].serviceRate += fee;
+                }else{
+                    System.out.print("this employee is not a trade unionist\n");
+                }
+                break;
+            case 2:
+                if(this.assalariados[id].syndicate){
+                    this.assalariados[id].serviceRate += fee;
+                }else{
+                    System.out.print("this employee is not a trade unionist\n");
+                }
+                break;
+            case 3:
+                if (this.comissionados[id].syndicate){
+                    this.comissionados[id].serviceRate += fee;
+                }else{
+                    System.out.print("this employee is not a trade unionist\n");
+                }
+                break;
+        }
     }
 }

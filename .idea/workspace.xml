@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad15aa99-a2cf-4d2f-a91b-f4054e5d4f58" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/company/Assalariado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Assalariado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Comissionado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Comissionado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Horista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Horista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Sistema.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Horista.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="61" />
+            <state relative-caret-position="47">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -35,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Assalariado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+            <state relative-caret-position="285">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -44,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Comissionado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+            <state relative-caret-position="149">
+              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
               <folding>
                 <element signature="e#900#901#0" expanded="true" />
                 <element signature="e#935#936#0" expanded="true" />
@@ -57,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Sistema.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+            <state relative-caret-position="183">
+              <caret line="137" column="34" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
               <folding>
                 <element signature="method#dayCalc#0;class#Sistema#0" />
                 <element signature="method#addEmployee#0;class#Sistema#0" />
@@ -67,6 +69,8 @@
                 <element signature="method#addCommissioned#0;class#Sistema#0" />
                 <element signature="method#removeEmployee#0;class#Sistema#0" />
                 <element signature="method#postPointCard#0;class#Sistema#0" />
+                <element signature="method#postSaleResults#0;class#Sistema#0" />
+                <element signature="method#launchServiceFee#0;class#Sistema#0" />
               </folding>
             </state>
           </provider>
@@ -105,8 +109,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Horista.java" />
         <option value="$PROJECT_DIR$/src/com/company/Cartao.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Horista.java" />
         <option value="$PROJECT_DIR$/src/com/company/Assalariado.java" />
         <option value="$PROJECT_DIR$/src/com/company/Comissionado.java" />
         <option value="$PROJECT_DIR$/src/com/company/Sistema.java" />
@@ -225,13 +229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Assalariado.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Cartao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -241,15 +238,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Horista.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="16" column="61" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="61" />
+        <state relative-caret-position="47">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Assalariado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Comissionado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+        <state relative-caret-position="149">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
           <folding>
             <element signature="e#900#901#0" expanded="true" />
             <element signature="e#935#936#0" expanded="true" />
@@ -259,8 +263,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Sistema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="130" column="26" selection-start-line="130" selection-start-column="26" selection-end-line="130" selection-end-column="26" />
+        <state relative-caret-position="183">
+          <caret line="137" column="34" selection-start-line="137" selection-start-column="34" selection-end-line="137" selection-end-column="34" />
           <folding>
             <element signature="method#dayCalc#0;class#Sistema#0" />
             <element signature="method#addEmployee#0;class#Sistema#0" />
@@ -269,6 +273,8 @@
             <element signature="method#addCommissioned#0;class#Sistema#0" />
             <element signature="method#removeEmployee#0;class#Sistema#0" />
             <element signature="method#postPointCard#0;class#Sistema#0" />
+            <element signature="method#postSaleResults#0;class#Sistema#0" />
+            <element signature="method#launchServiceFee#0;class#Sistema#0" />
           </folding>
         </state>
       </provider>

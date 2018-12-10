@@ -8,6 +8,8 @@ public class Horista {
     Cartao pointCard;
     boolean syndicate;
     double salary;
+    double syndicateRate;
+    double serviceRate;
     public Horista(int id){
         System.out.print("insert the employee name\n");
         Scanner input = new Scanner(System.in);
@@ -18,9 +20,13 @@ public class Horista {
         int unionist = input.nextInt();
         if (unionist == 1){
             this.syndicate = true;
+            System.out.print("insert the syndicate rate\n");
+            this.syndicateRate = input.nextDouble();
         }else{
             this.syndicate = false;
+            this.syndicateRate = 0;
         }
         this.salary = 0;
+        this.serviceRate = 0;
     }
 }
