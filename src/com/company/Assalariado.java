@@ -9,6 +9,7 @@ public class Assalariado {
     boolean syndicate;
     double syndicateRate;
     double serviceRate;
+    int payment;
     public Assalariado(int id){
         System.out.print("insert the employee name\n");
         Scanner input = new Scanner(System.in);
@@ -28,8 +29,11 @@ public class Assalariado {
         }
         this.salary = 0;
         this.serviceRate = 0;
+        System.out.print("choose a method of payment:\n" +
+                "bank deposit -- 1 / check in hand -- 2 / check by mail -- 3\n");
+        this.payment = input.nextInt();
     }
-    public Assalariado(int id, String name, boolean syndicate, double serviceRate, double syndicateRate){
+    public Assalariado(int id, String name, boolean syndicate, double serviceRate, double syndicateRate, int payment){
         Scanner input = new Scanner(System.in);
         System.out.print("insert the monthly salary");
         this.salary = input.nextDouble();
@@ -38,5 +42,6 @@ public class Assalariado {
         this.syndicate = syndicate;
         this.serviceRate = serviceRate;
         this.syndicateRate = syndicateRate;
+        this.payment = payment;
     }
 }

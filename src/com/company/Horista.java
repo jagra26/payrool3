@@ -10,6 +10,7 @@ public class Horista {
     double salary;
     double syndicateRate;
     double serviceRate;
+    int payment;
     public Horista(int id){
         System.out.print("insert the employee name\n");
         Scanner input = new Scanner(System.in);
@@ -28,8 +29,11 @@ public class Horista {
         }
         this.salary = 0;
         this.serviceRate = 0;
+        System.out.print("choose a method of payment:\n" +
+                "bank deposit -- 1 / check in hand -- 2 / check by mail -- 3\n");
+        this.payment = input.nextInt();
     }
-    public Horista(int id, String name, boolean syndicate, double serviceRate, double syndicateRate){
+    public Horista(int id, String name, boolean syndicate, double serviceRate, double syndicateRate, int payment){
         this.id = id;
         this.name = name;
         this.syndicate = syndicate;
@@ -37,5 +41,6 @@ public class Horista {
         this.syndicateRate = syndicateRate;
         this.pointCard = new Cartao();
         this.salary = 0;
+        this.payment = payment;
     }
 }

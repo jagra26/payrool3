@@ -7,6 +7,7 @@ public class Sistema {
     Assalariado[] assalariados;
     Comissionado[] comissionados;
     int lastDay;
+    int firstDay
     public Sistema (){
         this.horistas = new Horista[1000];
         this.assalariados = new Assalariado[1000];
@@ -17,7 +18,9 @@ public class Sistema {
         Scanner input = new Scanner(System.in);
         System.out.print("enter the day of the week that the month starts\n"+
                 "sun -- 1 / mon -- 2 / tue -- 3 / wed -- 4 / thu -- 5 / fri -- 6 / sat -- 7\n");
-        this.lastDay = dayCalc(input.nextInt());
+        int day = input.nextInt();
+        this.firstDay = day;
+        this.lastDay = dayCalc(day);
         System.out.print("select an operation:\n add an employee -- 1 / remove an employee -- 2 / "+
                 "post a point card -- 3 / post a sale results -- 4 / launch a service fee -- 5 /" +
                 "change an employee's details -- 6 / turn payroll to today -- 7/ Undo/Redo -- 8 / payment schedule -- 9\n");
@@ -40,13 +43,17 @@ public class Sistema {
                 break;
             case 6:
                 changeEmployeeDetails();
+                break;
+            case 7:
+                payments();
+                break;
             case 11:
                 exit = true;
                 break;
         }
         return exit;
     }
-    public int dayCalc(int day){
+    private int dayCalc(int day){
         int lastDay;
         if (day == 7){
             lastDay = 1;
@@ -62,7 +69,7 @@ public class Sistema {
         }
         return lastDay;
     }
-    public void addEmployee(){
+    private void addEmployee(){
         System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
         Scanner input = new Scanner(System.in);
         int type = input.nextInt();
@@ -78,7 +85,7 @@ public class Sistema {
                 break;
         }
     }
-    public void addHourly(){
+    private void addHourly(){
         for (int i = 0; i<1000; i++){
             if (this.horistas[i] == null){
                 this.horistas[i] =  new Horista(i);
@@ -87,7 +94,7 @@ public class Sistema {
             }
         }
     }
-    public void addSalaried(){
+    private void addSalaried(){
         for (int i = 0; i < 1000; i++){
             if (this.assalariados[i] == null){
                 this.assalariados[i] = new Assalariado(i);
@@ -96,7 +103,7 @@ public class Sistema {
             }
         }
     }
-    public void addCommissioned(){
+    private void addCommissioned(){
         for (int i = 0; i < 1000; i++){
             if (this.comissionados[i] == null){
                 this.comissionados[i] = new Comissionado(i);
@@ -105,7 +112,7 @@ public class Sistema {
             }
         }
     }
-    public void removeEmployee(){
+    private void removeEmployee(){
         System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
         Scanner input = new Scanner(System.in);
         int type = input.nextInt();
@@ -123,13 +130,13 @@ public class Sistema {
                 break;
         }
     }
-    public void postPointCard(){
+    private void postPointCard(){
         System.out.print("insert the hourly id\n");
         Scanner input = new Scanner(System.in);
         int id = input.nextInt();
         this.horistas[id].salary += this.horistas[id].pointCard.postPC();
     }
-    public void postSaleResults(){
+    private void postSaleResults(){
         System.out.print("insert the commissioned id\n");
         Scanner input = new Scanner(System.in);
         int id = input.nextInt();
@@ -137,7 +144,7 @@ public class Sistema {
         double value = input.nextDouble();
         this.comissionados[id].newSale(value);
     }
-    public void launchServiceFee(){
+    private void launchServiceFee(){
         System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
         Scanner input = new Scanner(System.in);
         int type = input.nextInt();
@@ -169,7 +176,7 @@ public class Sistema {
                 break;
         }
     }
-    public void changeEmployeeDetails(){
+    private void changeEmployeeDetails(){
         System.out.print("choose a type:\n hourly --1 / salaried --2 / commissioned --3\n");
         Scanner input = new Scanner(System.in);
         int type = input.nextInt();
@@ -196,7 +203,7 @@ public class Sistema {
             }
         }
     }
-    public void changeType(int in, int out, int id){
+    private void changeType(int in, int out, int id){
         switch (in){
             case 1:
                 switch (out){
@@ -205,7 +212,7 @@ public class Sistema {
                             if (this.assalariados[i] == null){
                                 this.assalariados[i] = new Assalariado(i, this.horistas[id].name,
                                         this.horistas[id].syndicate, this.horistas[id].serviceRate,
-                                        this.horistas[id].syndicateRate);
+                                        this.horistas[id].syndicateRate, this.horistas[id].payment);
                                 this.horistas[id] = null;
                                 break;
                             }
@@ -216,7 +223,7 @@ public class Sistema {
                             if (this.comissionados[i] == null){
                                 this.comissionados[i] = new Comissionado(i, this.horistas[id].name,
                                         this.horistas[id].syndicate, this.horistas[id].serviceRate,
-                                        this.horistas[id].syndicateRate);
+                                        this.horistas[id].syndicateRate, this.horistas[id].payment);
                                 this.horistas[id] = null;
                                 break;
                             }
@@ -231,7 +238,7 @@ public class Sistema {
                             if (this.horistas[i] == null){
                                 this.horistas[i] = new Horista(i, this.assalariados[id].name,
                                         this.assalariados[id].syndicate, this.assalariados[id].serviceRate,
-                                        this.assalariados[id].syndicateRate);
+                                        this.assalariados[id].syndicateRate, this.assalariados[id].payment);
                                 this.assalariados[id] = null;
                                 break;
                             }
@@ -242,7 +249,7 @@ public class Sistema {
                             if (this.comissionados[i] == null){
                                 this.comissionados[i] = new Comissionado(i, this.assalariados[id].name,
                                         this.assalariados[id].syndicate, this.assalariados[id].serviceRate,
-                                        this.assalariados[id].syndicateRate);
+                                        this.assalariados[id].syndicateRate, this.assalariados[id].payment);
                                 this.assalariados[id] = null;
                                 break;
                             }
@@ -257,7 +264,7 @@ public class Sistema {
                             if (this.horistas[i] == null){
                                 this.horistas[i] = new Horista(i, this.comissionados[id].name,
                                         this.comissionados[id].syndicate, this.comissionados[id].serviceRate,
-                                        this.comissionados[id].syndicateRate);
+                                        this.comissionados[id].syndicateRate, this.comissionados[id].payment);
                                 this.comissionados[id] = null;
                                 break;
                             }
@@ -268,7 +275,7 @@ public class Sistema {
                             if (this.assalariados[i] == null){
                                 this.assalariados[i] = new Assalariado(i, this.comissionados[id].name,
                                         this.comissionados[id].syndicate, this.comissionados[id].serviceRate,
-                                        this.comissionados[id].syndicateRate);
+                                        this.comissionados[id].syndicateRate, this.comissionados[id].payment);
                                 this.comissionados[id] = null;
                                 break;
                             }
@@ -276,6 +283,75 @@ public class Sistema {
                         break;
                 }
                 break;
+        }
+    }
+    private void payments(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("insert today\n");
+        int atualDay = input.nextInt();
+        int weekday = weekDay(atualDay);
+        int atualWeek = week(atualDay);
+        if (weekday == 6){
+            payHourly();
+            if (atualWeek == 2 || atualWeek == 4){
+                payCommissioned();
+            }
+        }
+        if (atualDay == this.lastDay){
+            payAssalaried();
+        }
+
+    }
+    private int weekDay(int atualDay){
+        return (atualDay%7 + (this.firstDay-1))%7;
+    }
+    private int week(int atualDay){
+        if(atualDay <= 7){
+            return 1;
+        }else if (atualDay > 7 && atualDay <=14){
+            return 2;
+        }else if (atualDay > 14 && atualDay <=21){
+            return 3;
+        }else {
+            return 4;
+        }
+    }
+    private  String paymentType(int type){
+        if (type == 1){
+            return "bank deposit";
+        }else if (type == 2){
+            return "check in hand";
+        }else{
+            return "check by mail";
+        }
+    }
+    private void payHourly(){
+        System.out.print("id - name - salary - syndicate rate - payment type\n");
+        for (int i = 0; i< 1000; i++){
+            if (this.horistas[i] != null){
+                System.out.printf("%d - %s - %2f - %2f - %s\n", i, this.horistas[i].name,
+                        this.horistas[i].salary, this.horistas[i].syndicateRate, paymentType(this.horistas[i].payment));
+                this.horistas[i].salary = 0;
+            }
+        }
+    }
+    private void payCommissioned(){
+        System.out.print("id - name - salary - syndicate rate - payment type\n");
+        for (int i = 0; i< 1000; i++){
+            if (this.comissionados[i] != null){
+                System.out.printf("%d - %s - %2f - %2f - %s\n", i, this.horistas[i].name,
+                        this.comissionados[i].salary, this.comissionados[i].syndicateRate, paymentType(this.comissionados[i].payment));
+                this.comissionados[i].salary = this.comissionados[i].fixedSalary;
+            }
+        }
+    }
+    private void payAssalaried(){
+        System.out.print("id - name - salary - syndicate rate - payment type\n");
+        for (int i = 0; i< 1000; i++){
+            if (this.assalariados[i] != null){
+                System.out.printf("%d - %s - %2f - %2f - %s\n", i, this.horistas[i].name,
+                        this.assalariados[i].salary, this.assalariados[i].syndicateRate, paymentType(this.assalariados[i].payment));
+            }
         }
     }
 }
