@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad15aa99-a2cf-4d2f-a91b-f4054e5d4f58" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Empregado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Assalariado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Assalariado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Sindicato.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Cartao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Cartao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Comissionado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Comissionado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Horista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Horista.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Sistema.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Sistema.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,8 +31,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Horista.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="119">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Horista#0;class#Horista#0" />
+                <element signature="method#Horista#1;class#Horista#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +45,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Assalariado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="119">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Assalariado#0;class#Assalariado#0" />
+                <element signature="method#Assalariado#1;class#Assalariado#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +59,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Comissionado.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1948#1949#0" expanded="true" />
+                <element signature="e#1994#1995#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,12 +73,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Sistema.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1768">
-              <caret line="370" column="5" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+            <state relative-caret-position="90">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding>
-                <element signature="method#Sistema#0;class#Sistema#0" />
+                <element signature="imports" expanded="true" />
                 <element signature="method#firstNLastday#0;class#Sistema#0" />
                 <element signature="method#firstDisplay#0;class#Sistema#0" />
+                <element signature="e#1304#1927#0" />
                 <element signature="method#dayCalc#0;class#Sistema#0" />
                 <element signature="method#addEmployee#0;class#Sistema#0" />
                 <element signature="method#addHourly#0;class#Sistema#0" />
@@ -71,11 +89,25 @@
                 <element signature="method#postPointCard#0;class#Sistema#0" />
                 <element signature="method#postSaleResults#0;class#Sistema#0" />
                 <element signature="method#launchServiceFee#0;class#Sistema#0" />
+                <element signature="method#changeEmployeeDetails#0;class#Sistema#0" />
                 <element signature="method#changeType#0;class#Sistema#0" />
+                <element signature="method#payments#0;class#Sistema#0" />
                 <element signature="method#weekDay#0;class#Sistema#0" />
                 <element signature="method#week#0;class#Sistema#0" />
                 <element signature="method#paymentType#0;class#Sistema#0" />
+                <element signature="method#payHourly#0;class#Sistema#0" />
+                <element signature="method#payCommissioned#0;class#Sistema#0" />
+                <element signature="method#payAssalaried#0;class#Sistema#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Empregado.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -83,8 +115,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Cartao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="153">
+              <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Cartao#0;class#Cartao#0" />
+                <element signature="method#postPC#0;class#Cartao#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,12 +141,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/company/Cartao.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Comissionado.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Horista.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Assalariado.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Empregado.java" />
         <option value="$PROJECT_DIR$/src/com/company/Sistema.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Horista.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Assalariado.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Comissionado.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Cartao.java" />
       </list>
     </option>
   </component>
@@ -127,6 +165,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,12 +188,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544576801611" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550017030508" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -200,8 +239,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -211,7 +251,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4140753" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -235,7 +275,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Assalariado.java</url>
-          <line>13</line>
+          <line>9</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -243,13 +283,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/company/Cartao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Sindicato.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -257,42 +291,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Assalariado.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Horista.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="119">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Horista#0;class#Horista#0" />
+            <element signature="method#Horista#1;class#Horista#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Horista.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Assalariado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="119">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Assalariado#0;class#Assalariado#0" />
+            <element signature="method#Assalariado#1;class#Assalariado#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Comissionado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="51" column="31" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
+        <state relative-caret-position="255">
+          <caret line="34" column="33" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1948#1949#0" expanded="true" />
+            <element signature="e#1994#1995#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Sindicato.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Cartao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Cartao#0;class#Cartao#0" />
+            <element signature="method#postPC#0;class#Cartao#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Empregado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Sistema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1768">
-          <caret line="370" column="5" selection-start-line="370" selection-start-column="5" selection-end-line="370" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding>
-            <element signature="method#Sistema#0;class#Sistema#0" />
+            <element signature="imports" expanded="true" />
             <element signature="method#firstNLastday#0;class#Sistema#0" />
             <element signature="method#firstDisplay#0;class#Sistema#0" />
+            <element signature="e#1304#1927#0" />
             <element signature="method#dayCalc#0;class#Sistema#0" />
             <element signature="method#addEmployee#0;class#Sistema#0" />
             <element signature="method#addHourly#0;class#Sistema#0" />
@@ -302,10 +364,15 @@
             <element signature="method#postPointCard#0;class#Sistema#0" />
             <element signature="method#postSaleResults#0;class#Sistema#0" />
             <element signature="method#launchServiceFee#0;class#Sistema#0" />
+            <element signature="method#changeEmployeeDetails#0;class#Sistema#0" />
             <element signature="method#changeType#0;class#Sistema#0" />
+            <element signature="method#payments#0;class#Sistema#0" />
             <element signature="method#weekDay#0;class#Sistema#0" />
             <element signature="method#week#0;class#Sistema#0" />
             <element signature="method#paymentType#0;class#Sistema#0" />
+            <element signature="method#payHourly#0;class#Sistema#0" />
+            <element signature="method#payCommissioned#0;class#Sistema#0" />
+            <element signature="method#payAssalaried#0;class#Sistema#0" />
           </folding>
         </state>
       </provider>
